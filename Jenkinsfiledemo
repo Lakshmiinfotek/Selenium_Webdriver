@@ -1,26 +1,26 @@
-pipeline{
-     agent any
-         stages{
-          stage('My build'){
-                steps{
-                    Echo "This is build stage"
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
             }
-                 }
-stage("My test"){
-        steps{
-              Echo "this is test stage"
- }
-          }
-stage("My deploy"){
-        steps{
-            Echo "this is a deploy stage"
+        }
+        stage('Develop') {
+            steps {
+                echo 'Developing'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
 }
-          }
-  stage("My release"){
-          steps{
-             Echo "This is a release stage"
-       }
-              }  
-          }
-      }
-             
