@@ -1,1 +1,26 @@
-This is my demo jenkins file
+pipeline{
+     agent any
+         stages{
+          stage('My build'){
+                steps{
+                    Echo "This is build stage"
+            }
+                 }
+stage("My test"){
+        steps{
+              Echo "this is test stage"
+ }
+          }
+stage("My deploy"){
+        steps{
+            Echo "this is a deploy stage"
+}
+          }
+  stage("My release"){
+          steps{
+             Echo "This is a release stage"
+       }
+              }  
+          }
+      }
+             
